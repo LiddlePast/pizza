@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru" class="bg-[#E4F0DF] scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="h-screen">
+<div class="modal fixed inset-0 bg-[#E4F0DF] transition-all z-50" id="modal">
+    <div class="image absolute left-2/4 -translate-x-2/4 top-2/4 -translate-y-2/4">
+        <img src="./3.gif" alt="Лоадер">
+    </div>
+</div>
+<div class="container flex mx-auto p-2 gap-10 h-full">
+    <aside class="history bg-white rounded shadow-md p-5 flex flex-col gap-2 hidden md:flex max-h-80">
+        <div class="section-title">
+            <h2 class="font-bold text-xl text-center">История запросов</h2>
+        </div>
+        <div class="queries pt-2 flex flex-col gap-2 h-full overflow-y-auto text-nowrap w-60 [&>*:nth-child(even)]:bg-[#D9D9D9]">
+            <div class="query flex justify-between w-full">
+                <div class="query-text">
+                    <span>Расчет: 02-11-2024 07:00</span>
+                </div>
+                <div class="query-action">
+                    <div class="icon cursor-pointer">
+                        <svg class="tailwind-icon stroke-2 stroke-gray-400 hover:stroke-black transition-colors"
+                             viewBox="0 0 24 24" width="24" height="24">
+                            <use href="sprite.svg#icon-close"></use>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="query flex justify-between w-full">
+                <div class="query-text">
+                    <span>Расчет: 02-11-2024 07:00</span>
+                </div>
+                <div class="query-action">
+                    <div class="icon cursor-pointer">
+                        <svg class="tailwind-icon stroke-2 stroke-gray-400 hover:stroke-black transition-colors"
+                             viewBox="0 0 24 24" width="24" height="24">
+                            <use href="sprite.svg#icon-close"></use>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="query flex justify-between w-full">
+                <div class="query-text">
+                    <span>Расчет: 02-11-2024 07:00</span>
+                </div>
+                <div class="query-action">
+                    <div class="icon cursor-pointer">
+                        <svg class="tailwind-icon stroke-2 stroke-gray-400 hover:stroke-black transition-colors"
+                             viewBox="0 0 24 24" width="24" height="24">
+                            <use href="sprite.svg#icon-close"></use>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="query flex justify-between w-full">
+                <div class="query-text">
+                    <span>Расчет: 02-11-2024 07:00</span>
+                </div>
+                <div class="query-action">
+                    <div class="icon cursor-pointer">
+                        <svg class="tailwind-icon stroke-2 stroke-gray-400 hover:stroke-black transition-colors"
+                             viewBox="0 0 24 24" width="24" height="24">
+                            <use href="sprite.svg#icon-close"></use>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="query flex justify-between w-full">
+                <div class="query-text">
+                    <span>Расчет: 02-11-2024 07:00</span>
+                </div>
+                <div class="query-action">
+                    <div class="icon cursor-pointer">
+                        <svg class="tailwind-icon stroke-2 stroke-gray-400 hover:stroke-black transition-colors"
+                             viewBox="0 0 24 24" width="24" height="24">
+                            <use href="sprite.svg#icon-close"></use>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="query flex justify-between w-full">
+                <div class="query-text">
+                    <span>Расчет: 02-11-2024 07:00</span>
+                </div>
+                <div class="query-action">
+                    <div class="icon cursor-pointer">
+                        <svg class="tailwind-icon stroke-2 stroke-gray-400 hover:stroke-black transition-colors"
+                             viewBox="0 0 24 24" width="24" height="24">
+                            <use href="sprite.svg#icon-close"></use>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="query flex justify-between w-full">
+                <div class="query-text">
+                    <span>Расчет: 02-11-2024 07:00</span>
+                </div>
+                <div class="query-action">
+                    <div class="icon cursor-pointer">
+                        <svg class="tailwind-icon stroke-2 stroke-gray-400 hover:stroke-black transition-colors"
+                             viewBox="0 0 24 24" width="24" height="24">
+                            <use href="sprite.svg#icon-close"></use>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="query flex justify-between w-full">
+                <div class="query-text">
+                    <span>Расчет: 02-11-2024 07:00</span>
+                </div>
+                <div class="query-action">
+                    <div class="icon cursor-pointer">
+                        <svg class="tailwind-icon stroke-2 stroke-gray-400 hover:stroke-black transition-colors"
+                             viewBox="0 0 24 24" width="24" height="24">
+                            <use href="sprite.svg#icon-close"></use>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <main class="chat-container rounded shadow-md p-5 w-full bg-white h-full flex flex-col gap-2">
+        <div class="section-title">
+            <h2 class="uppercase font-bold text-xl">Расчет площади вспаханных земель 🌏</h2>
+        </div>
+        <div class="section-chat h-full rounded border-2 max-h-full overflow-y-auto overflow-x-hidden flex flex-col p-5 gap-2 scroll-smooth" id="chat"></div>
+        <div class="section-input-message w-full">
+            <label class="relative">
+                <div class="btn btn-add-media absolute left-0 -bottom-3 cursor-pointer">
+                    <svg class="tailwind-icon stroke-2 stroke-gray-400 hover:stroke-black transition-colors"
+                         viewBox="0 0 50 50" width="50" height="50">
+                        <use href="sprite.svg#icon-add"></use>
+                    </svg>
+                </div>
+                <div class="btn btn-send absolute right-1 -bottom-3" id="btn-send">
+                    <svg class="tailwind-icon stroke-2 cursor-pointer stroke-gray-400 hover:stroke-black transition-colors"
+                         viewBox="0 0 50 50" width="50" height="50">
+                        <use href="sprite.svg#icon-send"></use>
+                    </svg>
+                </div>
+                <input type="text" placeholder="Введите запрос..." id="input-text"
+                       class="w-full border-2 rounded-full p-2 placeholder:text-xl text-xl pl-20 pr-20 text-ellipsis transition-colors focus:border-blue-900 focus:outline-none"/>
+            </label>
+        </div>
+    </main>
+</div>
+<script src="./main.js"></script>
+</body>
+</html>
