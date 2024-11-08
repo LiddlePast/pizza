@@ -2,15 +2,24 @@ const modal = document.getElementById('modal');
 const chatField = document.getElementById('chat');
 const sendMessageBtn = document.getElementById('btn-send');
 const inputField = document.getElementById('input-text');
-const fishTextEng = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto at consequuntur distinctio dolor ex, explicabo facere fugiat hic ipsam ipsum laudantium maiores nobis possimus quas qui repudiandae tenetur totam unde?";
-const fishTextRu = "А ещё сторонники тоталитаризма в науке будут призваны к ответу. Также как внедрение современных методик обеспечивает широкому кругу (специалистов) участие в формировании новых принципов формирования материально-технической и кадровой базы.";
+const documentTitle = "DOCUMENT";
+let inputText;
+
+document.onload = function () {
+    document.title = documentTitle;
+}
+
+const responses = [
+    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto at consequuntur distinctio dolor ex, explicabo facere fugiat hic ipsam ipsum laudantium maiores nobis possimus quas qui repudiandae tenetur totam unde?",
+    "А ещё сторонники тоталитаризма в науке будут призваны к ответу. Также как внедрение современных методик обеспечивает широкому кругу (специалистов) участие в формировании новых принципов формирования материально-технической и кадровой базы.",
+];
 
 setTimeout(function () {
     modal.classList.add('-translate-y-full');
 }, 1500);
 
 function createMessage(inputMessage, userType) {
-    if (inputMessage.length) {
+    if (inputMessage.length > 0) {
         let message = document.createElement('div');
         message.className = 'message w-full rounded-full flex'
         message.classList.add((userType === 'user') ? 'justify-end' : 'justify-start')
@@ -20,7 +29,6 @@ function createMessage(inputMessage, userType) {
             </div>
         `)
         addMessageToChat(message);
-        inputField.value = '';
     } else {
         alert('Вы ввели пустой запрос');
         return false;
@@ -36,26 +44,29 @@ function addMessageToChat(inputMessageElement) {
 }
 
 sendMessageBtn.addEventListener('click', function (e) {
-    let inputText = inputField.value;
+    e.preventDefault();
+    inputText = inputField.value;
+    inputField.value = '';
     if (inputText.length > 0) {
         createMessage(inputText, 'user')
+        generateResponse();
     }
-    generateResponse();
 });
 
 function chooseText() {
-    let count = Math.round(Math.random());
-    return (count === 0) ? fishTextEng : fishTextRu;
+    let choice = Math.abs(Math.round(Math.random() * responses.length - 1));
+    console.log(choice)
+    return responses[choice];
 }
 
 function generateResponse() {
-    setTimeout(function() {
+    setTimeout(function () {
         createMessage('Обработка...', 'robot')
     }, 500);
-    setTimeout(function() {
+    setTimeout(function () {
         createMessage('Пытаюсь найти ответ...', 'robot')
     }, 1500);
-    setTimeout(function() {
+    setTimeout(function () {
         createMessage(chooseText(), 'robot');
     }, 2000);
 }

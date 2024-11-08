@@ -2,7 +2,6 @@
 <html lang="ru" class="bg-[#E4F0DF] scroll-smooth">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
@@ -17,9 +16,34 @@
         <div class="section-title">
             <h2 class="uppercase font-bold text-xl">Расчет площади вспаханных земель 🌏</h2>
         </div>
-        <div class="section-chat h-full rounded border-2 max-h-full overflow-y-auto overflow-x-hidden flex flex-col p-5 gap-2 scroll-smooth" id="chat"></div>
+        <div class="section-chat h-full rounded border-2 max-h-full overflow-y-auto overflow-x-hidden flex flex-col p-5 gap-2 scroll-smooth"
+             id="chat"></div>
         <div class="section-input-message w-full">
-            <label class="relative">
+            <form class="form flex">
+                <div class="add-media">
+                    <label for="media">
+                        <svg class="tailwind-icon stroke-2 stroke-gray-400 hover:stroke-black transition-colors cursor-pointer"
+                             viewBox="0 0 50 50" width="50" height="50">
+                            <use href="sprite.svg#icon-add"></use>
+                        </svg>
+                        <input type="file" name="media" id="media" class="hidden">
+                    </label>
+                </div>
+                <div class="input-message w-full">
+                    <input type="text" id="input-text" placeholder="Введите запрос..." name="input-text"
+                           class="w-full border-2 rounded-full p-2 pl-5 placeholder:text-xl text-xl text-ellipsis transition-colors focus:border-blue-900 focus:outline-none">
+                </div>
+                <div class="btn btn-send">
+                    <button id="btn-send">
+                        <svg class="tailwind-icon stroke-2 cursor-pointer stroke-gray-400 hover:stroke-black transition-colors"
+                             viewBox="0 0 50 50" width="50" height="50">
+                            <use href="sprite.svg#icon-send"></use>
+                        </svg>
+                    </button>
+                </div>
+            </form>
+
+            <!--<label class="relative">
                 <div class="btn btn-add-media absolute left-0 -bottom-3 cursor-pointer">
                     <svg class="tailwind-icon stroke-2 stroke-gray-400 hover:stroke-black transition-colors"
                          viewBox="0 0 50 50" width="50" height="50">
@@ -34,7 +58,7 @@
                 </div>
                 <input type="text" placeholder="Введите запрос..." id="input-text"
                        class="w-full border-2 rounded-full p-2 placeholder:text-xl text-xl pl-20 pr-20 text-ellipsis transition-colors focus:border-blue-900 focus:outline-none"/>
-            </label>
+            </label>-->
         </div>
     </main>
 </div>
