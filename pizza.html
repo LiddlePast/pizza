@@ -11,6 +11,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     <link rel="stylesheet" href="./src/css/index.css">
+    <link rel="stylesheet" href="./src/css/product.css">
 </head>
 <body>
 <div class="wrapper">
@@ -69,6 +70,53 @@
             </nav>
         </div>
     </header>
+
+    <main class="main">
+        <div class="main-container container">
+            <div class="breadcrumbs"></div>
+            <section class="section section-product">
+                <div class="section-product__product-photo">
+                    <div class="product-photo">
+                        <img src="./src/images/pizza-image__pepperoni.png" alt="Пепперони фреш">
+                    </div>
+                </div>
+                <div class="section-product__product-config">
+                    <div class="product-title">
+                        <span>Пепперони фреш</span>
+                    </div>
+                    <div class="product-description">
+                        <span>25 см, традиционное тесто 25, 380 г</span>
+                    </div>
+                    <form action="#">
+                        <div class="product-size">
+                            <label for="product-size-small">
+                                <input type="radio" name="size" id="product-size-small" value="1">
+                                <span>Маленькая</span>
+                            </label>
+                            <label for="product-size-medium">
+                                <input type="radio" name="size" id="product-size-medium" value="2">
+                                <span>Средняя</span>
+                            </label>
+                            <label for="product-size-big">
+                                <input type="radio" name="size" id="product-size-big" value="3">
+                                <span>Большая</span>
+                            </label>
+                        </div>
+                        <div class="dough">
+                            <label for="product-dough-thick">
+                                <input type="radio" name="dough" id="product-dough-thick" value="2">
+                                <span>Традиционное</span>
+                            </label>
+                            <label for="product-dough-thin">
+                                <input type="radio" name="dough" id="product-dough-thin" value="1">
+                                <span>Тонкое</span>
+                            </label>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </main>
 </div>
 </body>
 </html>
